@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+		<title>Insert title here</title>
+		<style type="text/css">
+			body{
+				background-color:lightpink;
+			}
+			h1{color:blue}
+		
+		</style>
+		<script type="text/javascript">
+		function validate()
+		{
+			var f=true;
+		
+			
+			var regx=/^[a-zA-Z0-9_.]{2,50}@[a-zA-Z0-9_.]{2,30}[.][a-zA-Z0-9_.]{2,15}$/
+				if(document.form.email.value.search(regx)==-1)
+				{//if match field
+						alert("Please enter ur full email id")
+						f=false;
+				}
+
+			
+			var regx=/^[a-zA-0-9]+$/
+				if(document.form.password.value.search(regx)==-1)
+				{
+					//if match field
+					alert("Please enter alphanumeric value in password")
+					f=false;
+				}
+			
+			
+			
+			return f;
+		}
+
+		</script>
+	</head>
+	
+	
+	<body>
+
+		<h1><center>Login Page</</center></h1>
+			<form action="tlogin" name="form"method="get"onsubmit="return validate()">
+				<table border="1" align="center" cellpadding="40">
+					<tr><th>User Name</th>
+						<th align="left"><input type="text" name="email"size="30"></th>
+					</tr>
+					
+					<tr><th>Password</th>
+						<th align="left"><input type="password" name="password" size="30"></th>
+					</tr>
+					<tr>
+						<th colspan="2"><input type="submit" size="30"></th>
+					</tr>
+				
+				<tr><td colspan="2"><center><a href="forgotpwdtraveller.jsp">Forgot Password</a></center></td></tr>
+			
+			</table>
+
+
+		</form>
+
+</body>
+</html>
