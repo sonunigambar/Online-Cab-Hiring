@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+
+<style type="text/css">
+
+body{
+		background-color:lightpink;
+}
+h1,h2{
+		color:blue;
+}
+</style>
+
+<script type="text/javascript">
+function validate()
+{
+	var f=true;
+	
+	var regx=/^([a-zA-Z]||\s)+$/
+	if(document.myform.uname.value.search(regx)==-1)
+	{//if match field
+			alert("Please enter alphabet in name")
+			f=false;
+	}
+	
+	var regx=/^[a-zA-Z0-9_.]{2,50}@[a-zA-Z0-9_.]{2,30}[.][a-zA-Z0-9_.]{2,15}$/
+		if(document.myform.email.value.search(regx)==-1)
+		{//if match field
+				alert("Please enter ur full email id")
+				f=false;
+		}
+	
+	
+	var regx=/^\d+$/
+		if(document.myform.pno.value.search(regx)==-1)
+		{//if match field
+				alert("Please enter numeric value in mobile no")
+				f=false;
+		}
+	
+	var regx=/^([a-zA-Z0-9]||\s)+$/
+		if(document.myform.adr.value.search(regx)==-1)
+		{//if match field
+				alert("Please enter alphanumeric value in address")
+				f=false;
+		}
+
+	
+	
+	var regx=/^[a-zA-Z0-9]+$/
+		if(document.myform.pwd.value.search(regx)==-1)
+		{
+			//if match field
+			alert("Please enter alphanumeric value in password")
+			f=false;
+		}
+	
+	
+	
+	/*var regx=/^\d+$/
+		if(document.myform.pincode.value.search(regx)==-1)
+		{//if match field
+				alert("Please enter numeric value")
+				f=false;
+		}
+	*/
+	return f;
+}
+
+</script>
+</head>
+<body>
+
+<h1><center>online cab hiring system</center></h1>
+<h2><center>traveller registration form</center></h2>
+<form action="regs" name="myform" method="get" onsubmit="return validate()">
+			<table border="1" align="center" cellpadding="20">
+				<tr><th>Name</th>
+					<th align="left"><input type="text" name="uname" size="30"></th>
+				</tr>
+				
+				<tr><th>Email</th>
+					<th align="left"><input type="text" name="email"size="30"></th>
+				</tr>
+				<tr><th>Phone no</th>
+					<th align="left"><input type="text" name="pno"size="30"></th>
+				</tr>
+				<tr><th>Address</th>
+					<th align="left"><input type="text" name="adr" size="30"></th>
+				</tr>
+				<tr><th>Gender</th>
+					<th><input type="radio" name="gender"  value="Male"> Male
+					<input type="radio" name="gender" value="FeMale"> Female</th>
+				</tr>
+				<tr><th>Password</th>
+					<th align="left"><input type="password" name="pwd" size="30"></th>
+				</tr>
+				<tr>
+					<th colspan="2"><input type="submit" size="30"></th>
+				</tr>
+				
+				
+			
+			</table>
+
+
+		</form>
+
+
+</body>
+</html>
